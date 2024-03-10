@@ -1,0 +1,62 @@
+---
+interface Props {
+	image: string;
+	reverse?: boolean;
+}
+
+const { image, reverse } = Astro.props;
+---
+
+<div class="row-container" style={reverse ? "flex-direction: row-reverse" : ""}>
+	<div class="img-container">
+		<img src={image} alt="" />
+		<div class="back_square" style={reverse ? "left: 1rem" : "right: 1rem"}>
+		</div>
+	</div>
+	<slot name="text" class="text" />
+</div>
+
+<style>
+	.row-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		gap: 2rem;
+		margin-bottom: 6rem;
+	}
+	.img-container {
+		max-width: calc(100% - 2rem);
+		position: relative;
+		width: 100%;
+		min-width: 535px;
+	}
+	.img-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.back_square {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 5px solid var(--yellow-web);
+		top: 1rem;
+		z-index: -1;
+	}
+
+	@media screen and (max-width: 800px) {
+		div {
+			flex-direction: column !important;
+		}
+		.img-container {
+			width: 100%;
+			min-width: 320px;
+		}
+		p {
+			padding: 0;
+			width: 100%;
+		}
+	}
+</style>

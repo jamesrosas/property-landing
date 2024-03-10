@@ -21,21 +21,24 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@import url("https://fonts.googleapis.com/css2?family=Carter+One&family=Thasadith:ital,wght@0,700;1,700&display=swap");
+
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--p-font: "Thasadith", sans-serif;
+		--yellow-web: #f0a202;
+		--carter-font: "Carter One", cursive;
+		--shadow: 2px 2px 2px #8080804d;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: rgb(249, 245, 255);
 		background-size: 224px;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
 	}
 	code {
 		font-family:
