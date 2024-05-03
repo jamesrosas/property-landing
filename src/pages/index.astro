@@ -41,7 +41,8 @@ import ContactBtn from "../components/ContactBtn.astro";
 		</div>
 
 		<RowImageText
-			image="https://i.postimg.cc/dVDy4q2x/vista-completa-lotes.jpg"
+			image="/lotefrontview2.webp"
+            backSquare
 		>
 			<Fragment slot="text">
 				<article>
@@ -59,8 +60,9 @@ import ContactBtn from "../components/ContactBtn.astro";
 		</RowImageText>
 
 		<RowImageText
-			image="https://i.postimg.cc/dVDy4q2x/vista-completa-lotes.jpg"
+			image="/corner-view.webp"
 			reverse
+            backSquare
 		>
 			<Fragment slot="text">
 				<article>
@@ -88,7 +90,8 @@ import ContactBtn from "../components/ContactBtn.astro";
 		</div>
 
 		<RowImageText
-			image="https://i.postimg.cc/dVDy4q2x/vista-completa-lotes.jpg"
+			image="/sideview.webp"
+            backSquare
 		>
 			<Fragment slot="text">
 				<article>
@@ -109,6 +112,7 @@ import ContactBtn from "../components/ContactBtn.astro";
 		<RowImageText
 			image="https://i.postimg.cc/dVDy4q2x/vista-completa-lotes.jpg"
 			reverse
+            backSquare
 		>
 			<Fragment slot="text">
 				<article>
@@ -126,18 +130,27 @@ import ContactBtn from "../components/ContactBtn.astro";
 			</Fragment>
 		</RowImageText>
 
+        <RowImageText
+			image="/medidas-lote.png"
+		>
+			<Fragment slot="text">
+				<article>
+					<p>
+                        Desde el punto de vista de inversión , el lote se encuentra en
+                        una zona con aumento en la demanda de zonas para construir y
+                        habitar, lo que en el futuro será bueno para la valorización del
+                        terreno. Por lo cual adquirir el lote antes será mas beneficioso
+                        en cuestión de obtener una mayor rentabilidad.
+                    </p>
+				</article>
+			</Fragment>
+		</RowImageText>
+
 		<div style="text-align: center; margin-bottom: 2rem; padding: 0 2rem">
-			<p>
-				Desde el punto de vista de inversión , el lote se encuentra en
-				una zona con aumento en la demanda de zonas para construir y
-				habitar, lo que en el futuro será bueno para la valorización del
-				terreno. Por lo cual adquirir el lote antes será mas beneficioso
-				en cuestión de obtener una mayor rentabilidad.
-			</p>
-			<p>
-				Si ves una oportunidad aqui , no dudes en contactarme al
+			<p class="cta">
+				Si ves una oportunidad aqui , no dudes en contactarnos al
 				siguiente número:
-			</p>
+            </p>
 
 			<p
 				style="font-weight: 600; font-size: 30px; color: #248232; font-family: var(--p-font);"
@@ -148,26 +161,29 @@ import ContactBtn from "../components/ContactBtn.astro";
 
 		<div class="back-img"></div>
 		<div class="faq-container">
-			<h3 style="margin-bottom: 2rem;">Preguntas frecuentes:</h3>
+			<h2 style="margin-bottom: 2rem;">Preguntas frecuentes:</h2>
 
-			<h4>¿Es negociable?</h4>
-			<p style="margin-bottom: 2rem;">Si.</p>
+			<h3>¿Es negociable?</h3>
+			<p style="margin: 0.5rem 0 2rem 0;">Si.</p>
 
-			<h4>¿Por que el precio?</h4>
-			<p style="margin-bottom: 2rem;">
-				Por la ubicación , potencial de revalorización y posibilidades
-				de uso que te ofrece el lugar con 2.000 m2 de extensión. El cual
+			<h3>¿Por que el precio?</h3>
+			<p style="margin: 0.5rem 0 2rem 0;">
+				Por la ubicación , potencial de valorización y posibilidades
+				de uso que te ofrece el lugar con 3.014,35 m2 de extensión. El cual
 				podrás aprovechar y disfrutar cuando quieras, y suponiendo que
 				nunca decidas venderlo podrás heredarlo a las siguientes
 				generaciones de tu familia.
 			</p>
 
-			<h4>Información adicional:</h4>
-			<p>
+			<h2>Información adicional:</h2>
+			<p style="margin: 0.5rem 0 4rem 0;">
 				A 10 min del pueblo del Municipio de Sotaquirá en auto, y a 15
 				minutos de ciudades principales como Paipa.
 			</p>
+            <span class="fotter-line"></span>
+            <span class="fotter-line" style="bottom: 0.7rem; background-color: var(--yellow-web);"></span>
 		</div>
+
 
 		<ContactBtn />
 	</main>
@@ -182,6 +198,7 @@ import ContactBtn from "../components/ContactBtn.astro";
 		font-size: 20px;
 		line-height: 1.6;
 		color: #2d3a3a;
+
 	}
 	p {
 		color: #2d3a3a;
@@ -211,6 +228,16 @@ import ContactBtn from "../components/ContactBtn.astro";
 	.back-line:nth-child(2) {
 		top: 7rem;
 	}
+
+    .fotter-line {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background-color: #ffff;
+        z-index: 2;
+    }
 	header h1 {
 		font-size: 80px;
 		margin-top: 1rem;
@@ -224,7 +251,7 @@ import ContactBtn from "../components/ContactBtn.astro";
 		max-width: 1200px;
 		position: absolute;
 		top: 0;
-		background-image: url("https://i.postimg.cc/vHR8JX7v/IMG-20240110-WA0002.webp");
+		background-image: url("/banner-property.webp");
 		background-position: center;
 		background-size: cover;
 		height: 500px;
@@ -232,6 +259,7 @@ import ContactBtn from "../components/ContactBtn.astro";
 		justify-content: center;
 		align-items: center;
 		z-index: -1;
+		border-radius: 0px 0px 8px 8px;
 	}
 
 	.detail-box-container {
@@ -245,8 +273,12 @@ import ContactBtn from "../components/ContactBtn.astro";
 		width: fit-content;
 		padding: 1rem 2rem;
 		background-color: #2d3a3a;
-		color: white;
 		border-radius: 8px;
+	}
+
+	.detail-box ul li {
+		color: white;
+		font-size: 18px;
 	}
 	.detail-box .price {
 		font-size: 30px;
@@ -293,4 +325,10 @@ import ContactBtn from "../components/ContactBtn.astro";
 	.faq-container p {
 		color: white;
 	}
+    .cta {
+        color: #2d3a3a;
+        font-weight: 600;
+        font-size: 23px;
+    }
+
 </style>
