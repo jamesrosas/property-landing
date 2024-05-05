@@ -1,16 +1,17 @@
 ---
 interface Props {
 	image: string;
+    text_alt?: string;
 	reverse?: boolean;
     backSquare?: boolean;
 }
 
-const { image, reverse , backSquare} = Astro.props;
+const { image, text_alt, reverse , backSquare} = Astro.props;
 ---
 
 <div class="row-container" style={reverse ? "flex-direction: row-reverse" : ""}>
 	<div class="img-container">
-		<img src={image} alt="" />
+		<img src={image} alt={text_alt} />
         {backSquare && <div class="back_square" style={reverse ? "left: 1rem" : "right: 1rem"}></div>}
 		<!-- <div class="back_square" style={reverse ? "left: 1rem" : "right: 1rem"}>
 		</div> -->
